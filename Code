@@ -1,0 +1,220 @@
+.deleted {
+    background-color: #fdd;
+    text-decoration: line-through;
+}
+.movedTo {
+    padding-left: 8px;
+    margin-left: -12px;
+    border-left: 4px solid #c8ddff;
+}
+
+.movedHighlight {
+    background-color: #99bbff;
+}
+
+.movedFrom {
+    background-color: #c8ddff;
+}
+
+.inserted {
+    background-color:#bfb;
+    color:#000;
+    text-decoration:none;
+}
+
+.field {
+    display: inline-block;
+    min-width: 30px;
+  font-family: Monaco, Andale Mono, Courier New, monospace;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    text-indent: 0;
+}
+
+.changefield {
+    background-color: #ffd1d1;
+}
+
+.inlinefield {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    color: #000000;
+}
+
+.linkedfield {
+    border-color: #52a8ec;
+    background-color: #daeaf6;
+}
+
+.annotation {
+    display: block;
+    margin-top: 5px;
+    margin-left: 36px;
+    margin-right: -50px;
+    padding-right: 30px;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-size: 15px;
+    background-color: #f6f6f6;
+    border: 1px solid #DDD;
+    color: rgba(0, 0, 0, 1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 27px;
+    background-image:url(../images/icon_info.png);
+    background-repeat:no-repeat;
+    background-position:7px 7px;
+}
+
+
+
+.signature {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	background: #f9f9f9 url("../images/sign_pattern.png") no-repeat 0 0;
+	background-size: contain;
+}
+
+.typed {
+	height: 80px;
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 16px;
+	position: absolute;
+	z-index: 90;
+    width: 258px;
+    white-space: nowrap;
+
+	cursor: default;
+
+	color: #145394;
+	font: normal 1.875em/50px 'Yellowtail',cursive,Georgia,Times,serif;
+}
+
+.typed-big {
+    height: 160px;
+    width: 556px;
+    padding-left: 20px;
+   	padding-right: 20px;
+    padding-top: 41px;
+    font: normal 3.75em/100px 'Yellowtail',cursive,Georgia,Times,serif;
+}
+
+
+span.star {
+    background: url('../images/star.png') top left no-repeat;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+span.starbutton {
+    background: url('../images/starclear.png') top left no-repeat;
+    padding-left: 8px;
+    padding-right: 18px;
+}
+
+.docstyle table {
+    border-collapse: collapse;
+}
+
+.docstyle table, .docstyle th, .docstyle td {
+    border: 1px solid #ccc;
+}
+
+.docstyle td, .docstyle th {
+    padding: 5px;
+}
+
+.docstyle h1 {
+    font-size: 21px;
+    line-height: 24px;
+}
+
+.docstyle h2 {
+    font-size: 19px;
+    line-height: 22px;
+}
+
+.docstyle h3 {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.docstyle h4 {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.docstyle h5 {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.docstyle h6 {
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: none;
+    color: #000;
+}
+
+
+.doc-sign table {
+    border-collapse: collapse;
+}
+
+.doc-sign table, .doc-sign th, .doc-sign td {
+    border: 1px solid #ccc;
+
+}
+
+.doc-sign td, .doc-sign th {
+    padding: 5px;
+}
+
+/* eversign */
+.eversign_instructions {
+	background: #2f3337;
+	border-radius: 5px;
+	color: #ffffff;
+	padding: 5px 15px;
+	position: relative;
+}
+.eversign_instructions .heading:before {
+	background: url("../images/eversign/eversign_logo.png");
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position:center;
+	width: 150px;
+	height: 50px;
+	content: '';
+}
+.eversign_instructions .heading:after {
+	content: 'How to sign';
+	position: absolute;
+	right: 18px;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #676767;
+	top: 15px;
+	letter-spacing: 1px;
+}
+.eversign_instructions.almost_done .heading:after {
+	content: 'Almost Done';
+}
+.eversign_instructions p{font-size: 14px;}
+.eversign_instructions p:first-of-type {
+	margin-top: 5px;
+}
+.eversign_instructions p span {font-weight: bold;text-transform: uppercase;letter-spacing: 1px;color: #7e7e7e;margin-right: 5px;}
+.eversign_instructions p b {
+	color: #5dba5d;
+}
+#useDoc .form-actions button.sign_eversign {background: #5dba5d;color: #ffffff;border-color: #498649;text-shadow: none;}
