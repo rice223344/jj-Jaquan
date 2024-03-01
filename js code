@@ -1,0 +1,61 @@
+// http://stackoverflow.com/questions/6052544/showing-placeholder-text-for-password-field-in-ie
+function FauxPlaceholder() {
+    if (!ElementSupportAttribute('input', 'placeholder')) {
+        $("input[placeholder]").each(function () {
+            var $input = $(this);
+            $input.after('<input id="' + $input.attr('id') + '-faux" style="display:none;" type="text" value="' + $input.attr('placeholder') + '" />');
+            var $faux = $('#' + $input.attr('id') + '-faux');
+
+            $faux.attr('class', $input.attr('class')).attr('style', $input.attr('style'));
+            if ($input.val() === '') {
+                $faux.show();
+                $input.hide();
+            }
+
+            $faux.focus(function () {
+                $faux.hide();
+                $input.show().focus();
+            });
+
+            $input.blur(function () {
+                if ($input.val() === '') {
+                    $input.hide();
+                    $faux.show();
+                }
+            });
+        });
+    }
+}
+function ElementSupportAttribute(elm, attr) {
+    var test = document.createElement(elm);
+    return attr in test;
+}
+
+/*
+jQuery(function () {
+    jQuery.support.placeholder = false;
+    WebKit_type_browser = document.createElement('input');
+    if ('placeholder' in WebKit_type_browser) jQuery.support.placeholder = true;
+
+    if (!$.support.placeholder) {
+        var active = document.activeElement;
+        $(':text, textarea, :password').focus(
+                function () {
+                    if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+                        $(this).val('').removeClass('hasPlaceholder');
+                    }
+                }).blur(function () {
+                    if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+                        $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+                    }
+                });
+        $(':text, textarea, :password').blur();
+        $(active).focus();
+        $('form').submit(function () {
+            $(this).find('.hasPlaceholder').each(function () {
+                $(this).val('');
+            });
+        });
+    }
+
+});*/
